@@ -1,5 +1,6 @@
 package Manejo;
 
+
 public class Lista {
     
     Nodo PTR;
@@ -40,6 +41,19 @@ public class Lista {
             p = p.linkR;
         }
         System.out.println("Borrado inconcluseo, objeto no existene.");
+    }
+    
+    public Nodo BuscarConId(int id){
+        Nodo p = PTR;
+        boolean sw = true;
+        while(p != PTR || sw){
+            sw = false;
+            if(PTR.id == id){
+                return PTR;
+            }
+            next();
+        }
+        return null;
     }
     
     public Nodo next(){
